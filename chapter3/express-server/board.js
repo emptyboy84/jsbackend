@@ -19,7 +19,7 @@ app.post("/posts", (req, res) => {
   posts.push({ id: posts.length + 1, title, name, text, createdDt: Date() });
   res.json({ title, name, text });
 });
-
+ 
 app.delete("/posts/:id", (req, res) => {
   const id = req.params.id;
   const filteredPosts = posts.filter((post) => post.id !== +id);
